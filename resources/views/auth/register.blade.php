@@ -60,6 +60,19 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label for="alamat" class="col-md-4 col-form-label text-md-right">{{ __('Alamat') }}</label>
+                            <div>
+                                <input id="alamat" type="text" class="form-control" name="alamat">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                                <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Role ') }}</label>
+                                <div>
+                                    <input id="role_id" type="number" class="form-control" name="role_id">
+                                </div>
+                            </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

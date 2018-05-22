@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAldasTable extends Migration
+class CreateKaryawansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateAldasTable extends Migration
      */
     public function up()
     {
-        Schema::create('aldas', function (Blueprint $table) {
+        Schema::create('karyawans', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nama');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateAldasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aldas');
+        Schema::dropIfExists('karyawans');
     }
 }

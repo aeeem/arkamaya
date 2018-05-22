@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'password','alamat','email', 'role_id',
     ];
 
     /**
@@ -26,4 +26,21 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    public function role(){
+        return $this->belongsTo('App\role');
+
+
+    }
+
+    public function IsAdmin(){
+            if(($this->role->nama_role == "administrator")||($this->role->nama_role == "administrator
+            ")){
+                return false;
+            }
+            return true;
+     }
+
+
 }
+
